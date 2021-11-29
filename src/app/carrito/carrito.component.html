@@ -1,0 +1,9 @@
+<ul class="list-group list-group-flush">
+  <li class="list-group-item" *ngFor="let item of carrito;  index as i">
+    <div class="row">
+      <div class="col">{{item.titulo}}</div>
+      <div class="col">{{item.tipoMoneda}} {{item.precio}}</div>
+      <div class="col"><button type="button" class="btn-close btn-close-black" (click)="eliminaItemCarrito(i)" aria-label="Close"></button></div>
+    </div>
+    </li>
+</ul>

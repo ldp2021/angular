@@ -1,0 +1,163 @@
+<div class="container">
+<div class="row">
+  <div class="col">
+    <form #f="ngForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="card">
+        <h5 class="card-header">Completar Compra</h5>
+        <div class="card-body">
+          <div class="card">
+            <h5 class="card-header">Productos</h5>
+            <div class="card-body">
+              <app-carrito></app-carrito>
+
+          </div>
+          </div>
+
+          <div class="card">
+            <h5 class="card-header">Datos Personales</h5>
+            <div class="card-body">
+              <div class="row">
+
+
+              <div class="col-md-6">
+                <label for="validationCustom01" class="form-label">Nombre/s</label>
+                <input type="text" class="form-control" name="name"  [ngClass]="{'is-valid': name.touched && name.valid, 'is-invalid': name.touched && name.invalid}" ngModel #name="ngModel" id="validationCustom01" required>
+              </div>
+              <div class="col-md-6">
+                <label for="validationCustom02" class="form-label">Apellido</label>
+                <input type="text" class="form-control " id="validationCustom02" name="apellido"  [ngClass]="{'is-valid': apellido.touched && apellido.valid, 'is-invalid': apellido.touched && apellido.invalid}" ngModel #apellido="ngModel" required>
+              </div>
+              <div class="col-md">
+                <label for="validationCustomUsername" class="form-label">DNI</label>
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" placeholder="38589777" id="validationCustomUsername" aria-describedby="inputGroupPrepend" name="dni"  [ngClass]="{'is-valid': dni.touched && dni.valid, 'is-invalid': dni.touched && dni.invalid}" ngModel #dni="ngModel" required>
+                </div>
+              </div>
+
+
+
+
+
+
+            </div>
+          </div>
+          </div>
+
+          <div class="card">
+            <h5 class="card-header">Datos Envio</h5>
+            <div class="card-body">
+              <div class="row">
+
+              <div class="col-md-4">
+                <label for="validationCustom05" class="form-label">Calle</label>
+                <input type="text" class="form-control" id="validationCustom05" name="calle"  [ngClass]="{'is-valid': calle.touched && calle.valid, 'is-invalid': calle.touched && calle.invalid}" ngModel #calle="ngModel" required>
+
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustom05" class="form-label">Numero</label>
+                <input type="text" class="form-control" id="validationCustom05" name="numero"  [ngClass]="{'is-valid': numero.touched && numero.valid, 'is-invalid': numero.touched && numero.invalid}" ngModel #numero="ngModel" required>
+
+              </div>
+
+              <div class="col-md">
+                <label for="validationCustom03" class="form-label">Provincia</label>
+                <input type="text" class="form-control" id="validationCustom03" name="provincia"  [ngClass]="{'is-valid': provincia.touched && provincia.valid, 'is-invalid': provincia.touched && provincia.invalid}" ngModel #provincia="ngModel" required>
+              </div>
+              <div class="col-md">
+                <label for="validationCustom04" class="form-label">Municipio</label>
+                <select class="form-select" id="validationCustom04" name="municipio"  [ngClass]="{'is-valid': municipio.touched && municipio.valid, 'is-invalid': municipio.touched && municipio.invalid}" ngModel #municipio="ngModel" required>
+                  <option selected disabled value="">Seleccione</option>
+                  <option>Ezeiza</option>
+                </select>
+
+              </div>
+
+
+              <div class="col-md-4">
+                <label for="validationCustom05" class="form-label">Quien recibe </label>
+                <input type="text" class="form-control" id="validationCustom05" name="qrecibe"  [ngClass]="{'is-valid': qrecibe.touched && qrecibe.valid, 'is-invalid': qrecibe.touched && qrecibe.invalid}" ngModel #qrecibe="ngModel" required>
+
+              </div>
+
+              <div class="col-md-4">
+                <label for="validationCustom05" class="form-label">Observaciones</label>
+                <input type="text" class="form-control" id="validationCustom05" name="onserv"  [ngClass]="{'is-valid': onserv.touched && onserv.valid, 'is-invalid': onserv.touched && onserv.invalid}" ngModel #onserv="ngModel" required>
+
+              </div>
+
+            </div>
+
+
+            </div>
+          </div>
+          <div class="card">
+            <h5 class="card-header">Datos Pago</h5>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-4">
+                  <label for="validationCustom05" class="form-label">Numero de Tarjeta </label>
+                  <input type="text" class="form-control" id="validationCustom05" name="tarjeta"  [ngClass]="{'is-valid': tarjeta.touched && tarjeta.valid, 'is-invalid': tarjeta.touched && tarjeta.invalid}" ngModel #tarjeta="ngModel" required>
+
+                </div>
+
+                <div class="col-md-4">
+                  <label for="validationCustom05" class="form-label">Fecha vencimiento </label>
+                  <input type="text" class="form-control" id="validationCustom05" name="fvencimiento"  [ngClass]="{'is-valid': fvencimiento.touched && fvencimiento.valid, 'is-invalid': fvencimiento.touched && fvencimiento.invalid}" ngModel #fvencimiento="ngModel" required>
+
+                </div>
+
+                <div class="col-md-4">
+                  <label for="validationCustom05" class="form-label">PIN</label>
+                  <input type="text" class="form-control" id="validationCustom05" name="pin"  [ngClass]="{'is-valid': pin.touched && pin.valid, 'is-invalid': pin.touched && pin.invalid}" ngModel #pin="ngModel" required>
+
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustom05" class="form-label">NOMBRE Y APELLIDO(COMO ESTA EN LA TARJETA)</label>
+                  <input type="text" class="form-control" id="validationCustom05" name="nombre"  [ngClass]="{'is-valid': nombre.touched && nombre.valid, 'is-invalid': nombre.touched && nombre.invalid}" ngModel #nombre="ngModel" required>
+
+                </div>
+
+                <div class="col-md-4">
+                  <label for="validationCustom05" class="form-label">DNI titular</label>
+                  <input type="text" class="form-control" id="validationCustom05" name="dnitarj"  [ngClass]="{'is-valid': dnitarj.touched && dnitarj.valid, 'is-invalid': dnitarj.touched && dnitarj.invalid}" ngModel #dnitarj="ngModel" required>
+
+                </div>
+
+                <div class="col-md">
+                  <label for="validationCustom04" class="form-label">Cuotas</label>
+                  <select class="form-select" id="validationCustom04" name="cuotas"  [ngClass]="{'is-valid': cuotas.touched && cuotas.valid, 'is-invalid': cuotas.touched && cuotas.invalid}" ngModel #cuotas="ngModel" required>
+                    <option selected disabled value="">Seleccione</option>
+                    <option>1 cuota</option>
+                    <option>3 cuota</option>
+                    <option>6 cuota (Sin interes)</option>
+                    <option>12 cuota (Sin interes)</option>
+                    <option>18 cuota</option>
+                    <option>24 cuota (Sin interes)</option>
+                  </select>
+
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Finalizar operacion</button>
+                </div>
+
+
+
+
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+<!-- <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+      <input name="first" ngModel required #first="ngModel">
+      <input name="last" ngModel>
+      <button>Submit</button>
+</form> -->

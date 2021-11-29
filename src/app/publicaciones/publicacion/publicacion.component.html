@@ -1,0 +1,45 @@
+
+<div class="card mt-3" style="width: 20rem;" *ngIf="vistaLista === false">
+  <img src="{{item?.img}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{item?.titulo}}</h5>
+    <p class="card-text">{{item?.descripccion}}</p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">Precio:{{item?.tipoMoneda}} {{item?.precio}}</div>
+
+      </div>
+      <div class="row">
+        <div class="col">Stock:{{item?.Stock}}</div>
+      </div>
+    </div>
+    <a  (click)="addCarrito(item)" class="btn btn-primary ms-3">Añadir</a>
+  </div>
+</div>
+
+
+
+<div class="card  mb-3"  *ngIf="vistaLista === true">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{item?.img}}" class="card-img-top" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{item?.titulo}}</h5>
+         <p class="card-text">{{item?.descripccion}}</p>
+         <div class="container-fluid">
+          <div class="row">
+            <div class="col">Precio: {{item?.tipoMoneda}} {{item?.precio}}</div>
+            <div class="col"></div>
+          </div>
+          <div class="row">
+            <div class="col">Unidades disponibles:{{item?.Stock}}</div>
+          </div>
+        </div>
+        <a   (click)="addCarrito(item)" class="m-2  btn btn-primary">Agregar</a>
+      </div>
+    </div>
+  </div>
+</div>
+

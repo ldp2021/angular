@@ -1,0 +1,40 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+
+      <div class="col">
+        <app-barra-busqueda [data]="dataOriginal" (dataFiltrada)="outFiltro($event)" ></app-barra-busqueda>
+      </div>
+      <div class="col ms-5 ">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" (change)="cambioVista()" id="flexSwitchCheckDefault">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Vista de Lista</label>
+        </div>
+
+      </div>
+
+
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <div class="row" *ngIf="vistaLista === false">
+    <div class="col" *ngFor="let item of data">
+      <app-publicacion [vistaLista]="vistaLista"  [item]="item"></app-publicacion>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="vistaLista === true">
+    <div class="col" >
+      <div class="row" *ngFor="let item of data">
+        <div class="col-12">
+          <app-publicacion [vistaLista]="vistaLista"  [item]="item"></app-publicacion>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
